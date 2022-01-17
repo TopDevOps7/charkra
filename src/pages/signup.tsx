@@ -17,7 +17,7 @@ import { useMediaQuery } from "react-responsive";
 
 import Icon from "../icon.png";
 import "../custom.css";
-export default function Login() {
+export default function Signup() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [show, setShow] = useState(false);
@@ -75,7 +75,7 @@ export default function Login() {
         maxWidth="600px"
         w="70%"
         borderWidth={1}
-        marginTop="6%"
+        marginTop="10%"
         borderRadius={8}
         borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
         boxShadow={isTabletOrMobile ? "" : "lg"}

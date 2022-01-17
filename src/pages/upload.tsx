@@ -87,7 +87,7 @@ export default function Upload() {
         maxWidth="600px"
         w="70%"
         borderWidth={1}
-        marginTop="5%"
+        marginTop="7%"
         borderRadius={8}
         borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
         boxShadow={isTabletOrMobile ? "" : "lg"}
