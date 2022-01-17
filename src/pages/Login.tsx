@@ -169,13 +169,13 @@ export default function Login() {
         paddingRight="5%"
         paddingBottom="1%"
         maxWidth="600px"
-        w="70%"
+        w={isTabletOrMobile ? "85%" : "70%"}
         borderWidth={1}
-        marginTop="10%"
+        marginTop={isTabletOrMobile ? "50%" : "10% !important"}
         borderRadius={8}
-        borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
-        boxShadow={isTabletOrMobile ? "" : "lg"}
-        background={isTabletOrMobile ? "#150F1A" : "#150F1A"}
+        borderColor="#150F1A"
+        boxShadow="lg"
+        background="#150F1A"
       >
         <Box textAlign="center" display="flex" justifyContent="center">
           <Image src={Icon} alt="Dan Abramov" />

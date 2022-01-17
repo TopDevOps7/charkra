@@ -85,10 +85,11 @@ export default function Upload() {
         paddingRight="5%"
         paddingBottom="1%"
         maxWidth="600px"
-        w="70%"
+        w={isTabletOrMobile ? "85%" : "70%"}
         borderWidth={1}
-        marginTop="7%"
+        marginTop={isTabletOrMobile ? "25%" : "10%"}
         borderRadius={8}
+        minHeight={isTabletOrMobile ? "550px" : ""}
         borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
         boxShadow={isTabletOrMobile ? "" : "lg"}
         background={isTabletOrMobile ? "#150F1A" : "#150F1A"}
@@ -103,7 +104,7 @@ export default function Upload() {
             letterSpacing="wide"
             color="white"
             overflow="hidden"
-            fontSize={{ base: "10px", sm: "15px", md: "19px", lg: "20px" }}
+            fontSize={{ base: "16px", sm: "17px", md: "19px", lg: "20px" }}
             style={{ textOverflow: "ellipsis", fontFamily: "sans-serif" }}
           >
             {success ? "Move and Zoom" : "We're at the final step, William"}
@@ -112,7 +113,7 @@ export default function Upload() {
         {!success && (
           <Box
             as="div"
-            mt={10}
+            mt={isTabletOrMobile ? 10 : 10}
             display="grid"
             alignItems="center"
             justifyContent="center"
@@ -124,7 +125,7 @@ export default function Upload() {
                     cursor="pointer"
                     borderStyle="dashed"
                     borderRadius="50%"
-                    fontSize={isTabletOrMobile ? "30px" : "50px"}
+                    fontSize={isTabletOrMobile ? "40px" : "50px"}
                     padding="10px"
                     borderWidth="2px"
                     borderColor="#fff"
@@ -140,7 +141,7 @@ export default function Upload() {
                   htmlFor="date"
                   ml={5}
                   fontSize={{
-                    base: "10px",
+                    base: "15px",
                     sm: "15px",
                     md: "20px",
                     lg: "21px",
@@ -158,8 +159,8 @@ export default function Upload() {
                 mt={1}
                 textAlign="center"
                 fontSize={{
-                  base: "8px",
-                  sm: "10px",
+                  base: "12px",
+                  sm: "13px",
                   md: "15px",
                   lg: "15px",
                 }}
@@ -184,7 +185,7 @@ export default function Upload() {
         {success && (
           <Box
             as="div"
-            mt={3}
+            mt={isTabletOrMobile ? 10 : 3}
             display="grid"
             alignItems="center"
             justifyContent="center"
@@ -238,7 +239,11 @@ export default function Upload() {
             </Box>
           </Box>
         )}
-        <Box my={4} textAlign="left" marginTop="5%">
+        <Box
+          my={4}
+          textAlign="left"
+          marginTop={isTabletOrMobile ? "25%" : "5%"}
+        >
           <form onSubmit={handleSubmit}>
             {!success && (
               <FormControl mt={10}>
@@ -273,7 +278,12 @@ export default function Upload() {
                 </InputGroup>
               </FormControl>
             )}
-            <Box as="div" mt={10} display="flex" justifyContent="center">
+            <Box
+              as="div"
+              mt={isTabletOrMobile ? 105 : 10}
+              display="flex"
+              justifyContent="center"
+            >
               <Button
                 background={hover === false ? "#fff" : "#150F1A !important"}
                 variant={hover === false ? "solid" : "outline"}
@@ -293,10 +303,10 @@ export default function Upload() {
                     style={{ textOverflow: "ellipsis" }}
                     overflow="hidden"
                     fontSize={{
-                      base: "10px",
-                      sm: "12px",
-                      md: "15px",
-                      lg: "15px",
+                      base: "15px",
+                      sm: "16px",
+                      md: "18px",
+                      lg: "20px",
                     }}
                   >
                     Continue

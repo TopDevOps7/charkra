@@ -190,7 +190,7 @@ export default function Firstpage() {
           mt={5}
           p={0}
           maxWidth="600px"
-          w={isTabletOrMobile ? "100%" : "50% !important"}
+          w={isTabletOrMobile ? "50%" : "100% !important"}
         >
           <InputGroup>
             <InputRightElement
@@ -201,7 +201,7 @@ export default function Firstpage() {
               placeholder="Basic usage"
               color="#000"
               background="#FFF"
-              width="100%"
+              width={"100%"}
             />
           </InputGroup>
         </Box>

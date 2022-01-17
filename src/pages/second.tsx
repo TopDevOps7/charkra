@@ -127,10 +127,11 @@ export default function Second() {
         paddingRight="5%"
         paddingBottom="1%"
         maxWidth="600px"
-        w="70%"
+        w={isTabletOrMobile ? "85%" : "70%"}
         borderWidth={1}
-        marginTop="8%"
+        marginTop={isTabletOrMobile ? "35%" : "10%"}
         borderRadius={8}
+        minHeight={isTabletOrMobile ? "580px" : ""}
         borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
         boxShadow={isTabletOrMobile ? "" : "lg"}
         background={isTabletOrMobile ? "#150F1A" : "#150F1A"}
@@ -145,7 +146,7 @@ export default function Second() {
             letterSpacing="wide"
             color="white"
             overflow="hidden"
-            fontSize={{ base: "10px", sm: "15px", md: "19px", lg: "20px" }}
+            fontSize={isTabletOrMobile ? "18px" : "20px"}
             style={{ textOverflow: "ellipsis", fontFamily: "sans-serif" }}
           >
             Welcome! Let's complete your profile
@@ -256,8 +257,8 @@ export default function Second() {
                 <FormLabel
                   color="#fff"
                   fontSize={{
-                    base: "8px",
-                    sm: "10px",
+                    base: "13px",
+                    sm: "14px",
                     md: "13px",
                     lg: "13px",
                   }}
@@ -268,7 +269,12 @@ export default function Second() {
                 </FormLabel>
               </FormControl>
             </Box>
-            <Box as="div" mt={8} display="flex" justifyContent="center">
+            <Box
+              as="div"
+              mt={isTabletOrMobile ? 20 : 8}
+              display="flex"
+              justifyContent="center"
+            >
               <Button
                 background={hover === false ? "#fff" : "#150F1A !important"}
                 variant={hover === false ? "solid" : "outline"}

@@ -73,10 +73,11 @@ export default function Signup() {
         paddingRight="5%"
         paddingBottom="1%"
         maxWidth="600px"
-        w="70%"
+        w={isTabletOrMobile ? "85%" : "70%"}
         borderWidth={1}
-        marginTop="10%"
+        marginTop={isTabletOrMobile ? "35%" : "10%"}
         borderRadius={8}
+        minHeight={isTabletOrMobile ? "580px" : ""}
         borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
         boxShadow={isTabletOrMobile ? "" : "lg"}
         background={isTabletOrMobile ? "#150F1A" : "#150F1A"}
@@ -84,20 +85,24 @@ export default function Signup() {
         <Box textAlign="center" display="flex" justifyContent="center">
           <Image src={Icon} alt="Dan Abramov" />
         </Box>
-        <Box w="50%" as="div" marginTop="10%">
+        <Box w={isTabletOrMobile ? "65%" : "50%"} as="div" marginTop="10%">
           <Text
             fontWeight="bold"
             textTransform="none"
             letterSpacing="wide"
             color="white"
             overflow="hidden"
-            fontSize={{ base: "10px", sm: "17px", md: "20px", lg: "23px" }}
+            fontSize={isTabletOrMobile ? "20px" : "23px"}
             style={{ textOverflow: "ellipsis", fontFamily: "sans-serif" }}
           >
             Set a password for adam@gmail.com
           </Text>
         </Box>
-        <Box my={4} textAlign="left" marginTop="20%">
+        <Box
+          my={4}
+          textAlign="left"
+          marginTop={isTabletOrMobile ? "40%" : "20%"}
+        >
           <form onSubmit={handleSubmit}>
             <FormControl isRequired mt={6}>
               <Input
@@ -135,7 +140,7 @@ export default function Signup() {
             </Box>
             <Box
               as="div"
-              marginTop="20%"
+              marginTop={isTabletOrMobile ? "60%" : "20%"}
               display="flex"
               justifyContent="center"
             >
