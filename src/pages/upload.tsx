@@ -31,6 +31,7 @@ export default function Upload() {
   const [filelist, setFilelist] = useState<any>([]);
   const [progress, setProgress] = useState(0);
   const [imgData, setImgData] = useState<any>(null);
+  const [imageexistflag, setImageflagexist] = useState<any>(false);
   const [displayflagupload, setFlagupload] = useState(false);
   const [success, SetSuccess] = useState(false);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width:400px)" });
@@ -69,6 +70,7 @@ export default function Upload() {
       const updatelist = [...filelist, newfile];
       setFilelist(updatelist);
       console.log(filelist);
+      setImageflagexist(true);
       const reader = new FileReader();
       reader.addEventListener("load", () => {
         setImgData(reader.result);
@@ -87,9 +89,9 @@ export default function Upload() {
         maxWidth="600px"
         w={isTabletOrMobile ? "85%" : "70%"}
         borderWidth={1}
-        marginTop={isTabletOrMobile ? "25%" : "10%"}
+        marginTop={isTabletOrMobile ? "20%" : "10%"}
         borderRadius={8}
-        minHeight={isTabletOrMobile ? "550px" : ""}
+        minHeight={isTabletOrMobile ? "600px" : ""}
         borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
         boxShadow={isTabletOrMobile ? "" : "lg"}
         background={isTabletOrMobile ? "#150F1A" : "#150F1A"}
@@ -242,7 +244,7 @@ export default function Upload() {
         <Box
           my={4}
           textAlign="left"
-          marginTop={isTabletOrMobile ? "25%" : "5%"}
+          marginTop={isTabletOrMobile ? "18%" : "5%"}
         >
           <form onSubmit={handleSubmit}>
             {!success && (
@@ -280,7 +282,7 @@ export default function Upload() {
             )}
             <Box
               as="div"
-              mt={isTabletOrMobile ? 105 : 10}
+              mt={isTabletOrMobile ? 190 : 10}
               display="flex"
               justifyContent="center"
             >

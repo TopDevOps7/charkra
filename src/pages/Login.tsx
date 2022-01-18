@@ -171,13 +171,19 @@ export default function Login() {
         maxWidth="600px"
         w={isTabletOrMobile ? "85%" : "70%"}
         borderWidth={1}
-        marginTop={isTabletOrMobile ? "50%" : "10% !important"}
+        minHeight={isTabletOrMobile ? "600px" : ""}
+        marginTop={isTabletOrMobile ? "20%" : "10% !important"}
         borderRadius={8}
         borderColor="#150F1A"
         boxShadow="lg"
         background="#150F1A"
       >
-        <Box textAlign="center" display="flex" justifyContent="center">
+        <Box
+          textAlign="center"
+          marginTop={isTabletOrMobile ? "10%" : ""}
+          display="flex"
+          justifyContent="center"
+        >
           <Image src={Icon} alt="Dan Abramov" />
         </Box>
         <Box as="div" marginTop="2%">
@@ -185,16 +191,17 @@ export default function Login() {
             fontWeight="bold"
             textTransform="none"
             letterSpacing="wide"
+            marginTop={isTabletOrMobile ? "10%" : ""}
             textAlign="center"
             color="white"
             overflow="hidden"
-            fontSize={{ base: "10px", sm: "17px", md: "20px", lg: "20px" }}
+            fontSize={{ base: "15px", sm: "17px", md: "20px", lg: "20px" }}
             style={{ textOverflow: "ellipsis", fontFamily: "sans-serif" }}
           >
             Welcome back,Let's log you in
           </Text>
         </Box>
-        <Tabs isFitted mt={10}>
+        <Tabs isFitted mt={isTabletOrMobile ? 100 : 10}>
           <TabList>
             <Tab>Phone</Tab>
             <Tab>Email or username</Tab>
@@ -364,7 +371,7 @@ export default function Login() {
                   {!codeflag && (
                     <Box
                       as="div"
-                      marginTop="10%"
+                      marginTop={isTabletOrMobile ? "50%" : "10%"}
                       display="flex"
                       justifyContent="center"
                     >
@@ -460,7 +467,7 @@ export default function Login() {
                   </FormControl>
                   <Box
                     as="div"
-                    marginTop="10%"
+                    marginTop={isTabletOrMobile ? "20%" : "10%"}
                     display="flex"
                     justifyContent="center"
                   >

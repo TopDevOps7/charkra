@@ -129,9 +129,9 @@ export default function Second() {
         maxWidth="600px"
         w={isTabletOrMobile ? "85%" : "70%"}
         borderWidth={1}
-        marginTop={isTabletOrMobile ? "35%" : "10%"}
+        marginTop={isTabletOrMobile ? "20%" : "10%"}
         borderRadius={8}
-        minHeight={isTabletOrMobile ? "580px" : ""}
+        minHeight={isTabletOrMobile ? "550px" : ""}
         borderColor={isTabletOrMobile ? "#150F1A" : "#150F1A"}
         boxShadow={isTabletOrMobile ? "" : "lg"}
         background={isTabletOrMobile ? "#150F1A" : "#150F1A"}
@@ -271,7 +271,7 @@ export default function Second() {
             </Box>
             <Box
               as="div"
-              mt={isTabletOrMobile ? 20 : 8}
+              mt={isTabletOrMobile ? 150 : 8}
               display="flex"
               justifyContent="center"
             >
@@ -294,10 +294,10 @@ export default function Second() {
                     style={{ textOverflow: "ellipsis" }}
                     overflow="hidden"
                     fontSize={{
-                      base: "10px",
-                      sm: "12px",
-                      md: "15px",
-                      lg: "15px",
+                      base: "15px",
+                      sm: "15px",
+                      md: "18px",
+                      lg: "20px",
                     }}
                   >
                     Continue
